@@ -4,7 +4,6 @@ const apiKey = "b4e1871079ad0d513a2ab9e3069eb9d0";
 
 
 searchBtn.addEventListener("click", () => {
-    // const cityText = getCity(city.value);
     getCordinates(city.value).then((data) => {
         getWeatherData(data[0], data[1]).then((weatherinfo) => {
             console.log(weatherinfo.main.temp);
@@ -13,13 +12,6 @@ searchBtn.addEventListener("click", () => {
         });
     });
 });
-
-
-// const getCity = () => {
-
-// }
-
-
 
 async function getWeatherData(longitude, latitude) {
     const weatherFetchLink = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=`;
