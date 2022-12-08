@@ -1,0 +1,25 @@
+// Funktionen aufbauen :
+
+die die eimngabe clearen tut
+
+Einmal eine datei nur für den Aufbau der Page
+Wir machen aber auch im Dist eine halbwegs normale index.html
+
+Einmal eine mit den ganzen EventListeners
+
+Einmal eine mit den ganzen APi fuktionenn
+
+eine Main die dann alles zusammen fast
+
+vlt eine timeout für das Loading kao // muss nicht sein
+
+Error message fals city nicht gefunden wurde
+
+mach einen button für fahrenheit und celsius
+
+
+Zum Styling nicht viel :
+irgednwo bischen abschauen, bischen youtube schauen wegen css styling
+change Background depending on the weather(day, night, day rain, day snow, day sunny)
+
+
