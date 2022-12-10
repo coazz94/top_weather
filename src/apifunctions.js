@@ -1,4 +1,6 @@
-import * as basicfunctions from "./basic";
+// import * as basicfunctions from "./basic";
+// import * as domfunctions from "./domfunctions";
+
 
 const apiKey = "b4e1871079ad0d513a2ab9e3069eb9d0";
 const createCordLink = (cityName) => `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
@@ -12,15 +14,6 @@ function Cordinates(lon, lat, name) {
     this.name = name;
 }
 
-function getDataForm() {
-    let city = document.getElementById("city");
-
-    if (city) {
-        city = basicfunctions.clearInput(city.value);
-        return city;
-    }
-    return "";
-}
 
 async function getWeatherNow(latitude, longitude, type) {
     let link = "";
@@ -39,7 +32,6 @@ async function getWeatherNow(latitude, longitude, type) {
     return response;
 }
 
-
 async function getCityInfo(cityName) {
     const link = createCordLink(cityName);
     const apiData = await fetch(link);
@@ -54,5 +46,4 @@ async function getCityInfo(cityName) {
 export {
     getCityInfo,
     getWeatherNow,
-    getDataForm,
 };

@@ -1,4 +1,3 @@
-
 function clearInput(text) {
     const city = text.toString();
     // remove whitespaces
@@ -6,18 +5,19 @@ function clearInput(text) {
     return city;
 }
 
-function clearData(data) {
-    return [
-        data.main.temp,
-        data.main.humidity,
-        data.main.temp_min,
-        data.main.temp_max,
-        data.wind.speed,
-        data.clouds.all,
-    ];
+function exportDetails(data) {
+    return {
+        sunrise: (new Date((data.sys.sunrise + data.timezone) * 1000)),
+        sunset: (new Date((data.sys.sunset + data.timezone) * 1000)),
+        humidity: data.main.humidity,
+        pressure: data.main.pressure,
+        visability: data.visibility,
+        wind: data.wind.speed,
+    };
 }
+
 
 export {
     clearInput,
-    clearData,
+    exportDetails,
 };
